@@ -1,13 +1,3 @@
-.viewPostsHeader {
-  display: flex;
-  justify-content: center;
-}
-
-.postBodyContainer{
-  display: flex;
-  justify-content: center;
-}
-
 .profileButtons{
   display: flex;
   justify-content: space-evenly;
