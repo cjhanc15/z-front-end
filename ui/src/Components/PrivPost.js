@@ -54,12 +54,15 @@ const PrivPost = () => {
   return(
     <div className="background">
       <Header/>
-      <button onClick={() =>{deletePost()}}>Delete</button>
       <div className="IndvPosts">
-          <textarea className="postHeader" defaultValue={post.title} id="titleInput"/>
-          <textarea className="postBody" defaultValue={post.content} id="contentInput"/>
+        <textarea className="postHeader" defaultValue={post.title} id="titleInput"/>
+        <textarea className="postBody" defaultValue={post.content} id="contentInput"/>
       </div>
-      <button onClick={() => {editPost(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Submit Edits</button>
+      <div className="editBtns">
+        <button onClick={() => {editPost(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Submit Edits</button>
+        <button onClick={() =>{deletePost()}}>Delete</button>
+        <button onClick={() => nav(`/profile/${username}`)}>Cancel</button>
+      </div>
     </div>
   )
 }

@@ -26,6 +26,7 @@ const MyPost = () => {
       <Header/>
       <div className="IndvPosts" >
         <button onClick={() => {nav(`/profile/${username}/edit/${id}`)}}>Edit</button>
+        <button onClick={() => nav(`/profile/${username}`)}>Cancel</button>
         <h2 className="postHeader"><br/>{post.title}</h2>
         <p className="postBody">{post.content}<p>@{username}</p><p>{post.date}</p></p>
       </div>
