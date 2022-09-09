@@ -54,21 +54,15 @@ const PrivPost = () => {
   return(
     <div className="background">
       <Header/>
-      <button className="signInButton" onClick={()=> {nav(`/profile/${username}`)}}>Return</button>
       <div className="IndvPosts">
-      <div className="encapped">
-          <button className="signInButton" onClick={() =>{deletePost()}}>Delete</button>
+        <textarea className="postHeader" defaultValue={post.title} id="titleInput"/>
+        <textarea className="postBody" defaultValue={post.content} id="contentInput"/>
       </div>
-        <div className="viewPostsHeader">
-          <textarea className="postHeader" defaultValue={post.title} id="titleInput"/>
-        </div>
-        <div className="postBodyContainer">
-          <textarea className="indPostBody" defaultValue={post.content} id="contentInput"/>
-        </div>
-        <div className="postBodyContainer">
-          <button className="signInButton" onClick={() => {editPost(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Submit Edits</button>
-        </div>
-    </div>
+      <div className="editBtns">
+        <button onClick={() => {editPost(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Submit Edits</button>
+        <button onClick={() =>{deletePost()}}>Delete</button>
+        <button onClick={() => nav(`/profile/${username}`)}>Cancel</button>
+      </div>
     </div>
   )
 }

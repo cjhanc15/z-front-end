@@ -42,6 +42,7 @@ button:hover {
 }
 
 .postHeader {
+  box-sizing: border-box;
   width: 100%;
   text-align: center;
   font-size: x-large;
@@ -54,7 +55,8 @@ button:hover {
 }
 
 .postBody{
-  width: 104%;
+  box-sizing: border-box;
+  width: 100%;
   text-align: center;
   font-size: large;
   background-color: white;
@@ -65,15 +67,19 @@ button:hover {
 }
 
 .IndvPosts {
-  width: 60vw;
-  display: block;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
 }
 
 .viewAllPosts {
-  width: 60vw;
-  display: block;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.editBtns {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10vw;
 }
