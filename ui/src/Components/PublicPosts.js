@@ -24,12 +24,8 @@ const PublicPosts = () => {
       <Header/>
       {values.posts.map(post => (
       <div key={post.id}className="viewAllPosts" onClick={()=> {nav(`/publicfeed/${post.id}`)}}>
-        <div className="viewPostsHeader">
-          <h2 className="postHeader">{post.title}</h2>
-        </div>
-        <div className="postBodyContainer">
-          <p className="postBody">{post.content.length < 100 ? post.content : post.content.substring(0,100)+'...'}<p>@{}</p><p>{post.date}</p></p>
-        </div>
+        <h2 className="postHeader">{post.title}</h2>
+        <p className="postBody">{post.content.length < 100 ? post.content : post.content.substring(0,100)+'...'}<p>@{}</p><p>{post.date}</p></p>
       </div>))}
     </div>
   )

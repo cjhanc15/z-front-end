@@ -34,23 +34,17 @@ const Profile = () => {
   return(
     <div className="background">
       <Header/>
+      <h2 className="profileHeader">Welcome, {user.username}!</h2>
       <div className="profileButtons">
         <button className="profile" onClick={() => {nav('/')}}>Sign Out</button>
+        <button className="profile" onClick={() => {nav(`/profile/${username}/create`)}}>Create New Post!</button>
         <button className="profile" onClick={() => {nav(`/publicfeed`)}}>Public Feed</button>
       </div>
-      <h2 className="profileHeader">Welcome, {user.username}!</h2>
-        <div className="newPostContainer">
-          <button className="newPostButton" onClick={() => {nav(`/profile/${username}/create`)}}>Create New Post!</button>
-        </div>
       <div>
         {filteredBlogs.map(post => (
         <div key={post.id} className="viewAllPosts" onClick={() => {nav(`/profile/${username}/${post.id}`)}}>
-          <div className="viewPostsHeader">
             <h2 className="postHeader">{post.title}</h2>
-          </div>
-          <div className="postBodyContainer">
             <p className="postBody">{post.content.length < 100 ? post.content : post.content.substring(0,100)+'...'}<p>@{username}</p><p>{post.date}</p></p>
-          </div>
         </div>))}
       </div>
     </div>

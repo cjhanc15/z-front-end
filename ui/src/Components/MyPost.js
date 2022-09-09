@@ -24,10 +24,10 @@ const MyPost = () => {
   return(
     <div className="background">
       <Header/>
-      <button onClick={()=> {nav(`/profile/${username}`)}}>Return</button>
       <div className="IndvPosts" >
-        <h2 className="postHeader"><button onClick={() => {nav(`/profile/${username}/edit/${id}`)}}>Edit</button><br/>{post.title}</h2>
-        <p className="indPostBody">{post.content}<p>@{username}</p><p>{post.date}</p></p>
+        <button onClick={() => {nav(`/profile/${username}/edit/${id}`)}}>Edit</button>
+        <h2 className="postHeader"><br/>{post.title}</h2>
+        <p className="postBody">{post.content}<p>@{username}</p><p>{post.date}</p></p>
       </div>
     </div>
   )
