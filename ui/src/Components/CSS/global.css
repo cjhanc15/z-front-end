@@ -65,14 +65,24 @@ button:hover {
 }
 
 .IndvPosts {
-  width: 60vw;
+  width: 75vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.createPostBody {
+  width: 100.2%;
+  min-height: 32vh;
+}
+
+.editPostBody {
+  width: 100.2%;
+  min-height: 32vh;
+}
+
 .viewAllPosts {
-  width: 60vw;
+  width: 75vw;
   display: block;
   margin-left: auto;
   margin-right: auto;

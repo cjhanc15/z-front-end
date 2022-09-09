@@ -45,17 +45,10 @@ const CreatePost = () => {
   return(
     <div className="background">
       <Header/>
-      <button className="signInButton" onClick={()=> {nav(`/profile/${username}`)}}>Return</button>
       <div className="IndvPosts">
-        <div className="viewPostsHeader">
-          <textarea className="postHeader" placeholder="Your Title Goes Here" id="titleInput"/>
-        </div>
-        <div className="postBodyContainer">
-          <textarea className="indPostBody" placeholder="...What's on your mind?" id="contentInput"/>
-        </div>
-        <div className="postBodyContainer">
-          <button className="signInButton" onClick={() => {postIt(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Publish</button>
-        </div>
+        <textarea className="postHeader" placeholder="Your Title Goes Here" id="titleInput"/>
+        <textarea className="createPostBody" placeholder="...What's on your mind?" id="contentInput"/>
+        <button onClick={() => {postIt(document.getElementById('titleInput').value, document.getElementById('contentInput').value)}}>Publish</button>
       </div>
     </div>
   )
